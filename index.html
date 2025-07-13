@@ -25,7 +25,6 @@
     <div class="gallery">
       <h2>우리의 추억</h2>
       <div class="gallery-grid">
-        <!-- Lightbox 연동된 썸네일 -->
         <a href="images/gallery1.jpg" data-lightbox="wedding" data-title="추억 1"><img src="images/gallery1.jpg" alt="추억1" /></a>
         <a href="images/gallery2.jpg" data-lightbox="wedding" data-title="추억 2"><img src="images/gallery2.jpg" alt="추억2" /></a>
         <a href="images/gallery3.jpg" data-lightbox="wedding" data-title="추억 3"><img src="images/gallery3.jpg" alt="추억3" /></a>
@@ -44,7 +43,7 @@
     <div class="map">
       <h2>오시는 길</h2>
       <iframe
-        src="https://map.naver.com/embed/v1/?page=0&pinTitle=JK아트컨벤션&pinX=126.900583&pinY=37.517965&pin=Y"
+        src="https://map.naver.com/p/entry/place/1897374821?c=15.00,0,0,0,dh&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202507140233&locale=ko&svcName=map_pcv5"
         width="100%"
         height="300"
         frameborder="0"
@@ -57,14 +56,15 @@
 
     <div class="account">
       <h2>마음 전하기</h2>
-      <button onclick="toggleVisibility('groom')">신랑에게 마음 전하기</button>
-      <div id="groom" class="hidden">
-        <p>신한은행 110-123-456789 (팡이)</p>
+
+      <button onclick="toggleAccount('groom')">신랑에게 마음 전하기</button>
+      <div id="groom" class="account-info">
+        신한은행 110-123-456789 (팡이)
       </div>
 
-      <button onclick="toggleVisibility('bride')">신부에게 마음 전하기</button>
-      <div id="bride" class="hidden">
-        <p>국민은행 123456-78-901234 (망곰이)</p>
+      <button onclick="toggleAccount('bride')">신부에게 마음 전하기</button>
+      <div id="bride" class="account-info">
+        국민은행 123456-78-901234 (망곰이)
       </div>
     </div>
   </div>
@@ -73,9 +73,9 @@
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
   <script>
-    function toggleVisibility(id) {
+    function toggleAccount(id) {
       const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+      el.classList.toggle("open");
     }
   </script>
 </body>

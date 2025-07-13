@@ -56,34 +56,53 @@ h1 {
   border-radius: 8px;
 }
 
-/* 마음 전하기 (세로 배치) */
+/* 마음 전하기 (세련되게 업그레이드) */
 .account {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .account button {
   width: 220px;
-  padding: 12px 0;
-  font-size: 1.1em;
-  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-radius: 30px;
   border: none;
-  background-color: #f1c40f;
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
   color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 6px 12px rgba(241, 196, 15, 0.5);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .account button:hover {
-  background-color: #d4ac0d;
+  background: linear-gradient(135deg, #d68910, #b7950b);
+  box-shadow: 0 8px 15px rgba(183, 149, 11, 0.7);
 }
 
-.hidden {
-  display: none;
+.account .account-info {
+  width: 240px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff9db;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
+  padding: 0 20px;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 2em;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.account .account-info.open {
+  max-height: 100px; /* 충분한 높이 */
+  padding: 15px 20px;
 }
 
 /* Lightbox fade-in 커스텀 */
