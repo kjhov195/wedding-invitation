@@ -3,26 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>우리 결혼합니다</title>
+  <title>팡이 & 망곰이 결혼합니다</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <h1>우리가 결혼합니다</h1>
-    <img src="images/couple.jpg" alt="커플사진" class="main-photo" />
-    <p class="names">김철수 ❤️ 이영희</p>
-    <p class="date">2025년 10월 5일 (일) 오후 2시</p>
-    <p class="location">서울 강남구 라움아트센터 2층</p>
+    <h1>팡이 ❤️ 망곰이</h1>
+    <p class="date">2026년 2월 28일 (토) 오후 2시</p>
+    <p class="location">서울 영등포구 JK아트컨벤션</p>
 
-    <iframe 
-      src="https://map.kakao.com/link/map/라움아트센터,37.515027,127.035461" 
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+    <img src="images/main.jpg" alt="대표 사진" class="main-photo" />
 
-    <p class="message">
-      귀한 걸음 해주시면 큰 기쁨이 되겠습니다.<br/>
-      따뜻한 축복 부탁드립니다.
-    </p>
+    <div class="gallery">
+      <h2>우리의 추억</h2>
+      <div class="gallery-grid">
+        <!-- ✅ Lightbox 적용된 이미지 링크 -->
+        <a href="images/gallery1.jpg" data-lightbox="wedding"><img src="images/gallery1.jpg" alt="추억1"></a>
+        <a href="images/gallery2.jpg" data-lightbox="wedding"><img src="images/gallery2.jpg" alt="추억2"></a>
+        <a href="images/gallery3.jpg" data-lightbox="wedding"><img src="images/gallery3.jpg" alt="추억3"></a>
+        <a href="images/gallery4.jpg" data-lightbox="wedding"><img src="images/gallery4.jpg" alt="추억4"></a>
+        <a href="images/gallery5.jpg" data-lightbox="wedding"><img src="images/gallery5.jpg" alt="추억5"></a>
+        <a href="images/gallery6.jpg" data-lightbox="wedding"><img src="images/gallery6.jpg" alt="추억6"></a>
+        <a href="images/gallery7.jpg" data-lightbox="wedding"><img src="images/gallery7.jpg" alt="추억7"></a>
+        <a href="images/gallery8.jpg" data-lightbox="wedding"><img src="images/gallery8.jpg" alt="추억8"></a>
+        <a href="images/gallery9.jpg" data-lightbox="wedding"><img src="images/gallery9.jpg" alt="추억9"></a>
+        <a href="images/gallery10.jpg" data-lightbox="wedding"><img src="images/gallery10.jpg" alt="추억10"></a>
+        <a href="images/gallery11.jpg" data-lightbox="wedding"><img src="images/gallery11.jpg" alt="추억11"></a>
+        <a href="images/gallery12.jpg" data-lightbox="wedding"><img src="images/gallery12.jpg" alt="추억12"></a>
+      </div>
+    </div>
+
+    <div class="map">
+      <h2>오시는 길</h2>
+      <iframe 
+        src="https://map.naver.com/v5/search/JK%EC%95%84%ED%8A%B8%EC%BB%A8%EB%B0%B4%EC%85%98/place/11595898?c=14128572.0423313,4513482.8036122,17,0,0,0,dh"
+        width="100%" height="300" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="account">
+      <h2>마음 전하기</h2>
+      <button onclick="toggleVisibility('groom')">신랑에게</button>
+      <div id="groom" class="hidden">
+        <p>신한은행 110-123-456789 (팡이)</p>
+      </div>
+
+      <button onclick="toggleVisibility('bride')">신부에게</button>
+      <div id="bride" class="hidden">
+        <p>국민은행 123456-78-901234 (망곰이)</p>
+      </div>
+    </div>
   </div>
+
+  <!-- ✅ Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
