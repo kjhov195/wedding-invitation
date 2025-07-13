@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  background-color: #fff9f3;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-photo {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.names {
+  font-size: 1.8em;
+  margin: 20px 0 10px;
+}
+
+.date, .location {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 1em;
+  line-height: 1.6;
+}
